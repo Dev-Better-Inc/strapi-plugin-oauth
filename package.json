@@ -1,12 +1,12 @@
 {
-  "name": "strapi-oauth",
+  "name": "@dev-better/strapi-plugin-oauth",
   "version": "0.0.0",
-  "description": "This is the description of the plugin.",
+  "description": "Implement OAuth2 methods for the Strapi",
   "strapi": {
-    "name": "strapi-oauth",
-    "description": "Description of Strapi Oauth plugin",
+    "name": "strapi-plugin-oauth",
+    "description": "Implement OAuth2 methods for the Strapi",
     "kind": "plugin",
-    "displayName": "Strapi Oauth"
+    "displayName": "Strapi OAuth2"
   },
   "dependencies": {
     "@strapi/design-system": "^1.6.3",
@@ -29,13 +29,8 @@
     "styled-components": "^5.2.1"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Vadym Dev-Better"
   },
-  "maintainers": [
-    {
-      "name": "A Strapi developer"
-    }
-  ],
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
