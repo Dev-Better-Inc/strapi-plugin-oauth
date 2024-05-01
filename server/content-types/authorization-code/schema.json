@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oauth_authorization_codes",
+  "info": {
+    "singularName": "authorization-code",
+    "pluralName": "authorization-codes",
+    "displayName": "AuthorizationCode",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "authorizationCode": {
+      "type": "string",
+      "private": true,
+      "unique": true,
+      "minLength": 8
+    },
+    "expiresAt": {
+      "type": "datetime"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::strapi-oauth.client"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "codeChallenge": {
+      "type": "string"
+    },
+    "writeKey": {
+      "type": "string"
+    },
+    "readKey": {
+      "type": "string"
+    },
+    "writeKeyUsedAt": {
+      "type": "datetime"
+    },
+    "readKeyUsedAt": {
+      "type": "datetime"
+    }
+  }
+}

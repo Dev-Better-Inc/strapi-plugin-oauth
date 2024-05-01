@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oauth_tokens",
+  "info": {
+    "singularName": "token",
+    "pluralName": "tokens",
+    "displayName": "OauthToken",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "accessToken": {
+      "type": "string",
+      "unique": true,
+      "private": true
+    },
+    "accessTokenExpiresAt": {
+      "type": "datetime"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::strapi-oauth.client"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "refreshToken": {
+      "type": "string",
+      "required": false
+    },
+    "refreshTokenExpiresAt": {
+      "type": "datetime",
+      "required": false
+    }
+  }
+}

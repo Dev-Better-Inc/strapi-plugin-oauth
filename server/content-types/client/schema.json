@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oauth_clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "OauthClient"
+  },
+  "options": {
+    "draftAndPublish": true,
+    "comment": ""
+  },
+  "attributes": {
+    "clientId": {
+      "type": "uid",
+      "required": true
+    },
+    "clientSecret": {
+      "type": "string",
+      "private": true
+    },
+    "redirectUris": {
+      "type": "text"
+    },
+    "grants": {
+      "type": "string"
+    }
+  }
+}
